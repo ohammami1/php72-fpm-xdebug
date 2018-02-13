@@ -1,5 +1,5 @@
 # See https://github.com/docker-library/php/blob/4677ca134fe48d20c820a19becb99198824d78e3/7.0/fpm/Dockerfile
-FROM smartteam1/php-fpm:7.2
+FROM smartteam1/php72-fpm:1.0
 
 # install xdebug
 RUN pecl install xdebug
