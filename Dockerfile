@@ -5,3 +5,6 @@ FROM smartteam1/php72-fpm:1.0
 RUN pecl install xdebug
 ADD xdebug.ini /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
 RUN docker-php-ext-enable xdebug
+
+ADD entrypoint.sh /usr/bin/entrypoint.sh
+CMD sh /usr/bin/entrypoint.sh
