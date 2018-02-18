@@ -6,7 +6,8 @@ RUN pecl install xdebug
 ADD xdebug.ini /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
 RUN docker-php-ext-enable xdebug
 
-COPY entrypoint /usr/bin/entrypoint
+ADD entrypoint /usr/bin/entrypoint
+CMD sh /usr/bin/entrypoint
 ENTRYPOINT ["entrypoint"]
 
 CMD ["php"]
